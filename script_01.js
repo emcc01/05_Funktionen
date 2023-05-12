@@ -91,7 +91,7 @@ function getString(firstName, familyName)
     const GAP = " ";                    
     let outputStr = "Hallo" + GAP + firstName + GAP + familyName + "!";
     return outputStr;  // return sendet Daten an den Call zurück
-    console.log(outputStr); // return bricht die Fkt ab
+    // console.log(outputStr); // return bricht die Fkt ab
 }
 // Input -> Parameter, return -> Output
 
