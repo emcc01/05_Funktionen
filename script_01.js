@@ -1,12 +1,13 @@
 "use strict";
 
 /***** Funktionen 01 *****/
-// 1. Kapselung von Codeblöcken
+// 1. Kapselung von Codeblöcken// wie legt man funktion an, oder lässt anlegen, man braucht call, funktionsdeklaration, Übergabe von Parametern siehe 2b und c, trennen der fkt und return: 3b
 
-// Funktionsaufruf (call)
+
+// Funktionsaufruf (call) // damit wird Funktion ausgeführt
 // test();
 
-// Funktionsdeklaration, rumpf, body, callee
+// Funktionsdeklaration, rumpf, body, callee // legt fest, was Fkt machen soll
 function test()
 {
     console.log("Hallo Karsten!");
@@ -21,11 +22,11 @@ function test()
 
 // ausgabeNamen()
 
-function ausgabeNamen() 
-{
-    let firstName = "Karsten";    //interne Kapselung
-    console.log("Hallo " + firstName + "!");
-}
+// function ausgabeNamen() 
+// {
+//     let firstName = "Karsten";    //interne Kapselung
+//     console.log("Hallo " + firstName + "!");
+// }
 
 // console.log(firstName); // Fehler:Scope!Variable ist in der Funktion gekapselt
 // Variable sollte besser von aussen erreichbar sein ->
@@ -34,15 +35,15 @@ function ausgabeNamen()
 /***** Funktionen 02b *****/
 // 2b. Parametrisierung + Datenübergabe von AUSSEN
 
-// ausgabeNamenParam("Asad"); // Argument (Daten für Parameter)
-// ausgabeNamenParam("Roxana");
+ausgabeNamenParam("Asad"); // Argument (Daten für Parameter)
+ausgabeNamenParam("Roxana");
 
 // //Argumente sind Daten für Parameter
 
-// function ausgabeNamenParam(firstName)  //Parameter, von aussen erreichbar
-//  {
-//     console.log("Hallo " + firstName + "!");
-// }
+function ausgabeNamenParam(firstName)  //Parameter, von aussen erreichbar
+ {
+    console.log("Hallo " + firstName + "!");
+}
 
 
 /***** Funktionen 02c *****/
@@ -86,11 +87,11 @@ function ausgabeNamenParams2(firstName, familyName)
 output (getString("Maxine", "Mützerich"));
 output(getString(prompt("Vorname?"), prompt("Nachname?")));
 
-function getString(firstName, familyName) 
+function getString(firstName, familyName) //Parameter deklarieren
 {
     const GAP = " ";                    
     let outputStr = "Hallo" + GAP + firstName + GAP + familyName + "!";
-    return outputStr;  // return sendet Daten an den Call zurück
+    return outputStr;  // return sendet Daten AN DEN CALL !!!  zurück
     // console.log(outputStr); // return bricht die Fkt ab
 }
 // Input -> Parameter, return -> Output
